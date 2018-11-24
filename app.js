@@ -23,7 +23,7 @@ require('./config/passport')(passport);
 app.use('/', routes);
 
 
-const dbURL = process.env.MONGO_URI || 'mongodb://localhost:27017/node-class';
+const dbURL = process.env.MONGODB_URI || 'mongodb://localhost:27017/node-class';
 
 mongoose.connect(dbURL, {useNewUrlParser: true})
 .then (() => {
